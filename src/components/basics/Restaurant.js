@@ -10,7 +10,7 @@ const Restaurant = () => {
   return (
     <div>
 
-    < MenuCard  menuData = {menuData}  / >
+    < MenuCard  menudata = {menuData}  / >
     </div>
   )
 }

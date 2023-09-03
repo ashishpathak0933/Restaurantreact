@@ -1,19 +1,20 @@
 import React from 'react'
 
-const MenuCard = ({menuData}) => {
-    console.log(menuData)
+const MenuCard = ({menudata}) => {
+    console.log(menudata)
   return (
     <div>
+    <section  className='main-card--cointainer'>
 
-    {menuData.map((currentElem) => {
+    {menudata.map((curElem) => {
         return (
             <div>
-            <div className="card-container">
+            <div className="card-container"  key = {curElem.id}>
             <div className="card ">
             <div className="card-body">
-            <span className="card-number card-circle subtle">1</span>
-            <span className="card-author subtle">Breakfast</span>
-            <h2 className="card-title"> Maggi </h2>
+            <span className="card-number card-circle subtle">{curElem.id}</span>
+            <span className="card-author subtle"></span>
+            <h2 className="card-title"> {curElem.name}</h2>
             <span className="card-description subtle">
             I love Maggi realy oo yues Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Blanditiis, at consectetur totam voluptatibus
@@ -31,7 +32,7 @@ const MenuCard = ({menuData}) => {
     })}
 
 
- 
+ </section>
     </div>
   )
 }
