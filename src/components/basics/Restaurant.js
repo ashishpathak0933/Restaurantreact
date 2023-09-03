@@ -3,6 +3,13 @@ import "./style.css"
 import Menu from "./menudata" 
 import MenuCard from "./MenuCard"
 
+
+
+ const uniqueList = [ ...new Set (Menu.map((curElem) => {
+
+  return curElem.category;
+ }))
+];
 const Restaurant = () => {
     const [menuData , setMenuData]  = useState(Menu)
 
