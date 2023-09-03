@@ -16,15 +16,12 @@ const MenuCard = ({menudata}) => {
             <span className="card-author subtle"></span>
             <h2 className="card-title"> {curElem.name}</h2>
             <span className="card-description subtle">
-            I love Maggi realy oo yues Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Blanditiis, at consectetur totam voluptatibus
-            quibusdam iusto. Accusamus quas, soluta ipsam autem eius
-            necessitatibus fugiat in
+            {curElem.description}
             </span>
             <div className="card-read">Read</div>
             </div>
-            {/* <img src={image} alt="images" className="card-media"></img> */}
-            <span className="card-tag_subtle">Order Now</span>
+             <img src={curElem.image} alt="images" className="card-media"></img> 
+            <span className="card-tag subtle">Order Now</span>
             </div>
             </div>
             </div>
