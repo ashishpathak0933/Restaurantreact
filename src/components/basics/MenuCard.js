@@ -20,7 +20,8 @@ const MenuCard = ({menudata}) => {
             </span>
             <div className="card-read">Read</div>
             </div>
-             <img src={curElem.image} alt="images" className="card-media"></img> 
+             <img src={curElem.image} alt="images" 
+             className="card-media"></img> 
             <span className="card-tag subtle">Order Now</span>
             </div>
             </div>
