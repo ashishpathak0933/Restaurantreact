@@ -2,6 +2,7 @@ import React  , {useState } from 'react'
 import "./style.css"
 import Menu from "./menudata" 
 import MenuCard from "./MenuCard"
+import Navbar from "./navbar"
 
 
 
@@ -28,24 +29,8 @@ const Restaurant = () => {
     console.log(menuData);
   return (
     <div>
-     
-    <nav className='navbar'>
-    <div className='btn-group'>
-    <button className='btn-group__item' 
-    onClick={ () => filterItem("breakfast")}>Breakfast</button>
-    <button className='btn-group__item' 
-    onClick={ () => filterItem("lunch")}>Lunch</button>
-    <button className='btn-group__item' onClick={ () => filterItem("evening")}>Evening</button>
-    <button className='btn-group__item' onClick={ () => filterItem("dinner")}>Dinner</button>
-    <button className='btn-group__item' onClick={() => setMenuData(Menu)}>All</button>
-  
-    </div>
-    
-    </nav>
 
-
-
-
+    < Navbar filterItem = {filterItem}/>
 
     < MenuCard  menudata = {menuData}  / >
     </div>
@@ -54,8 +39,4 @@ const Restaurant = () => {
 
 
 
-
-
-
-
-export default Restaurant
+export default Restaurant;
