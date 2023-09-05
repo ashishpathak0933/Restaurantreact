@@ -1,7 +1,7 @@
 import React from 'react'
 
 const MenuCard = ({menudata}) => {
-    console.log(menudata)
+    
   return (
     <div>
     <section  className='main-card--cointainer'>
@@ -15,7 +15,7 @@ const MenuCard = ({menudata}) => {
             <div className="card ">
             <div className="card-body">
             <span className="card-number card-circle subtle">{id}</span>
-            <span className="card-author subtle"></span>
+            <span className="card-author subtle">{category}</span>
             <h2 className="card-title"> {name}</h2>
             <span className="card-description subtle">
             {description}

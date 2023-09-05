@@ -9,15 +9,22 @@ import Navbar from "./navbar"
  const uniqueList = [ ...new Set (Menu.map((curElem) => {
 
   return curElem.category;
- }))
+ })) ,
+  "All"
+ 
 ];
 const Restaurant = () => {
     const [menuData , setMenuData]  = useState(Menu)
 
+    const [menuList ] = useState(uniqueList)
+
 
     const filterItem = (category)=> {
+      if (category === "All") {
+        setMenuData(Menu);
+        return;
+      }
       const updatedList = Menu.filter((curElem)=> {
-
       return curElem.category === category;
 
       });
@@ -30,7 +37,7 @@ const Restaurant = () => {
   return (
     <div>
 
-    < Navbar filterItem = {filterItem}/>
+    < Navbar filterItem = {filterItem} menuList = {menuList}/>
 
     < MenuCard  menudata = {menuData}  / >
     </div>
